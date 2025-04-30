@@ -15,8 +15,11 @@ import {
   ArrowDown,
   ExternalLink,
   Palette,
-  LineChart
+  LineChart,
+  Coffee,
+  Sprout
 } from 'lucide-react';
+import profilePhoto from './assets/images/foto.png';
 
 import Header from './components/Header';
 import MouseParallax from './components/MouseParallax';
@@ -32,6 +35,9 @@ function App() {
   // Parallax effect values
   const y = useTransform(scrollYProgress, [0, 1], [0, 300]);
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+
+  const accessKey = import.meta.env.VITE_WEB3FORMS_API_KEY;
+  
   
   useEffect(() => {
     // Initialize GSAP animations
@@ -74,6 +80,9 @@ function App() {
     { name: 'JavaScript', icon: <Zap size={24} />, color: 'bg-yellow-500' },
     { name: 'React', icon: <Layers size={24} />, color: 'bg-cyan-500' },
     { name: 'Responsive Design', icon: <Smartphone size={24} />, color: 'bg-green-500' },
+     // Новые элементы:
+  { name: 'Java', icon: <Coffee size={24} />, color: 'bg-orange-500' },
+  { name: 'Spring', icon: <Sprout size={24} />, color: 'bg-emerald-500' },
   ];
 
   const projects = [
@@ -123,7 +132,7 @@ function App() {
       description: 'Fast-loading websites optimized for search engines and users.',
       icon: <LineChart size={32} />,
     },
-  ];
+      ];
 
   return (
     <div className="min-h-screen">
@@ -190,6 +199,16 @@ function App() {
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <FadeInSection>
+              <div className="flex justify-center">
+                <img 
+                  src={profilePhoto} 
+                  alt="Profile Photo" 
+                  className="rounded-full w-[144px] h-[139px] object-cover shadow-lg"
+                />
+              </div>
+            </FadeInSection>
+            
+            <FadeInSection delay={0.2}>
               <div className="animate-on-scroll">
                 <h3 className="text-2xl font-bold mb-4">Hi there! I'm a web developer passionate about creating animated experiences.</h3>
                 <p className="text-gray-700 mb-6">
@@ -262,13 +281,13 @@ function App() {
             ))}
           </div>
           
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <FadeInSection>
               <a href="#" className="btn-outline inline-flex items-center gap-2">
                 View All Projects <ExternalLink size={16} />
               </a>
             </FadeInSection>
-          </div>
+          </div> */}
         </div>
       </section>
       
@@ -331,7 +350,8 @@ function App() {
             
             <FadeInSection delay={0.2}>
               <form className="card" action="https://api.web3forms.com/submit" method="POST">
-              <input type="hidden" name="access_key" value="WEB3FORMS_API_KEY"/>
+              <input type="hidden" name="access_key" value={accessKey}/>
+              <input type="hidden" name="email" value="mihailnadia27@gmail.com" />
                 <div className="mb-4">
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
                   <input 
