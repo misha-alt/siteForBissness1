@@ -86,7 +86,7 @@ function App() {
   ];
 
   const projects = [
-    {
+    {   
       title: 'E-Commerce Platform',
       description: 'A modern e-commerce solution with animations and smooth transitions.',
       image: 'https://images.unsplash.com/photo-1661956602944-249bcd04b63f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
