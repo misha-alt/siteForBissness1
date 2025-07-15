@@ -17,10 +17,11 @@ const Header: React.FC = () => {
   
   const navLinks = [
     { name: 'Home', href: '#hero' },
-    { name: 'About me', href: '#about' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Services', href: '#services' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Обо мне', href: '#about' },
+    { name: 'Услуги', href: '#services' },
+    { name: 'Портфолио', href: '#portfolio' },
+    { name: 'Блог', href: '#blog' },
+    { name: 'Контакты', href: '#contact' },
   ];
   
   return (
@@ -35,7 +36,7 @@ const Header: React.FC = () => {
             href="#" 
             className={`text-2xl font-bold ${isScrolled ? 'text-gray-900' : 'text-white'}`}
           >
-            <span className="gradient-text">Web development</span>
+            <span className="gradient-text">Михаил Яцкевич</span>
           </a>
           
           {/* Desktop Navigation */}
