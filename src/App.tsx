@@ -162,7 +162,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Transforming ideas into <span className="gradient-text">modern animated websites</span> 🚀
+            Превращение идей в современные <span className="gradient-text">современные анимированные сатйы</span> 🚀
           </motion.h1>
           
           <motion.p 
@@ -171,7 +171,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            Creating engaging digital experiences with smooth animations and interactive elements.
+            Создание увлекательного цифрового опыта с плавной анимацией и интерактивными элементами.
           </motion.p>
           
           <motion.div 
