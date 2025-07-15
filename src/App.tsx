@@ -24,7 +24,6 @@ import {
   FileText,
   Settings
 } from 'lucide-react';
-import profilePhoto from './assets/images/foto.png';
 
 import Header from './components/Header';
 import MouseParallax from './components/MouseParallax';
@@ -41,7 +40,7 @@ function App() {
   const y = useTransform(scrollYProgress, [0, 1], [0, 300]);
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
-  const accessKey = import.meta.env.VITE_WEB3FORMS_API_KEY;
+  const accessKey = import.meta.env.VITE_WEB3FORMS_API_KEY || "YOUR_ACCESS_KEY_HERE";
   
   useEffect(() => {
     // Initialize GSAP animations
@@ -196,9 +195,9 @@ function App() {
       >
         <MouseParallax>
           <div className="absolute inset-0 z-0">
-            <div className="absolute top-20 left-20 w-64 h-64 bg-green-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float"></div>
-            <div className="absolute bottom-20 right-20 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float animation-delay-2000"></div>
-            <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse-slow"></div>
+            <div className="absolute top-20 left-20 w-64 h-64 bg-primary-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float"></div>
+            <div className="absolute bottom-20 right-20 w-72 h-72 bg-secondary-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float"></div>
+            <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse-slow"></div>
           </div>
         </MouseParallax>
         
@@ -207,7 +206,7 @@ function App() {
           style={{ y, opacity }}
         >
           <motion.h1 
-            className="hero-text text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+            className="hero-text text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -217,7 +216,7 @@ function App() {
           </motion.h1>
           
           <motion.div 
-            className="hero-text text-lg md:text-xl text-gray-700 mb-8 max-w-4xl mx-auto text-left bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg"
+            className="hero-text text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto text-left bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -273,11 +272,11 @@ function App() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <FadeInSection>
               <div className="flex justify-center">
-                <img 
-                  src={profilePhoto} 
-                  alt="Михаил Яцкевич" 
-                  className="rounded-full w-[200px] h-[200px] object-cover shadow-lg"
-                />
+                <div className="w-72 h-72 bg-gradient-to-t from-black/70 to-transparent rounded-full flex items-center justify-center">
+                  <div className="w-64 h-64 bg-gray-100 rounded-full flex items-center justify-center">
+                    <Cpu size={80} className="text-primary-500" />
+                  </div>
+                </div>
               </div>
             </FadeInSection>
             
@@ -313,7 +312,7 @@ function App() {
                     <div className={`${tech.color} p-3 rounded-full text-white mb-3`}>
                       {tech.icon}
                     </div>
-                    <h4 className="font-bold text-sm text-center" translate="no">{tech.name}</h4>
+                    <h4 className="font-bold text-sm text-center">{tech.name}</h4>
                   </div>
                 </TiltCard>
               ))}
@@ -417,7 +416,7 @@ function App() {
                       
                       <div className="flex flex-wrap gap-2 mt-auto">
                         {project.tags.map((tag, tagIndex) => (
-                          <span key={tagIndex} className="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded" translate="no">
+                          <span key={tagIndex} className="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">
                             {tag}
                           </span>
                         ))}
