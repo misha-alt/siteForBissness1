@@ -262,13 +262,13 @@ function App() {
           </motion.div>
         </motion.div>
         
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 scroll-indicator">
+        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 scroll-indicator">
           <ArrowDown size={32} className="text-gray-600" />
         </div>
       </section>
       
       {/* About Section */}
-      <section id="about" className="py-20 bg-white mt-16">
+      <section id="about" className="py-20 bg-white mt-32">
         <div className="container mx-auto px-4">
           <FadeInSection>
             <h2 className="section-title text-center mb-16">Обо мне</h2>
