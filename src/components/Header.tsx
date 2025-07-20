@@ -34,9 +34,12 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center">
           <a 
             href="#" 
-            className={`text-2xl font-bold ${isScrolled ? 'text-gray-900' : 'text-white'}`}
+            className={`text-lg sm:text-2xl font-bold ${isScrolled ? 'text-gray-900' : 'text-white'}`}
           >
-            <span className="gradient-text">Михаил Яцкевич</span>
+            <span className="gradient-text">
+              <span className="hidden sm:inline">Михаил Яцкевич</span>
+              <span className="sm:hidden">М. Яцкевич</span>
+            </span>
           </a>
           
           {/* Desktop Navigation */}

@@ -191,7 +191,7 @@ function App() {
       <section 
         ref={heroRef}
         id="hero" 
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
       >
         <MouseParallax>
           <div className="absolute inset-0 z-0">
