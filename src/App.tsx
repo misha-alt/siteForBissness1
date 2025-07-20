@@ -268,7 +268,7 @@ function App() {
       </section>
       
       {/* About Section */}
-      <section id="about" className="py-20 bg-white">
+      <section id="about" className="py-20 bg-white mt-16">
         <div className="container mx-auto px-4">
           <FadeInSection>
             <h2 className="section-title text-center mb-16">Обо мне</h2>
