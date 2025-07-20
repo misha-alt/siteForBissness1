@@ -97,7 +97,10 @@ const Header: React.FC = () => {
                     <a 
                       href={link.href} 
                       className="block font-medium text-gray-700 hover:text-primary-500 transition-colors duration-300"
-                      onClick={() => setMobileMenuOpen(false)}
+                      onClick={(e) => {
+                        // Небольшая задержка перед закрытием меню для корректной прокрутки
+                        setTimeout(() => setMobileMenuOpen(false), 100);
+                      }}
                     >
                       {link.name}
                     </a>
