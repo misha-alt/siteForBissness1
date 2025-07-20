@@ -211,8 +211,13 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            🚀 Профессиональная разработка ПО: <br/>
-            <span className="gradient-text">Java Spring, Python-интеграции, лендинги под ключ</span>
+            <span className="block md:hidden text-2xl">
+              🚀 <span className="gradient-text">Java Spring, Python, лендинги</span>
+            </span>
+            <span className="hidden md:block">
+              🚀 Профессиональная разработка ПО: <br/>
+              <span className="gradient-text">Java Spring, Python-интеграции, лендинги под ключ</span>
+            </span>
           </motion.h1>
           
           <motion.div 
@@ -221,11 +226,11 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <p className="mb-4">
+            <p className="mb-4 text-base md:text-xl">
               Привет! Я — <strong>Михаил Яцкевич</strong>, fullstack-разработчик с опытом создания надежных backend-решений на Java Spring, автоматизации бизнеса на Python и быстрых лендингов для ваших проектов.
             </p>
             
-            <div className="space-y-2 mb-4">
+            <div className="space-y-2 mb-4 text-sm md:text-base">
               <div className="flex items-center gap-2">
                 <CheckCircle size={20} className="text-green-500" />
                 <span>Пишу чистый и масштабируемый код</span>
@@ -240,7 +245,7 @@ function App() {
               </div>
             </div>
             
-            <p className="font-medium">
+            <p className="font-medium text-sm md:text-base">
               📌 Нужен мощный API, скрипт для автоматизации или продающий лендинг? Давайте обсудим ваш проект!
             </p>
           </motion.div>
